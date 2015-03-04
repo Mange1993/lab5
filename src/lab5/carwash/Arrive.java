@@ -2,7 +2,7 @@ package lab5.carwash;
 import lab5.simulator.*;
 /**
  * Class for the Event Carr arrives
- * @author Sara
+ * @author Sara(test)
  */
 public class Arrive extends Event {
 	
@@ -21,9 +21,7 @@ public class Arrive extends Event {
 				carState.Carqueue.add(Arrive);
 				carState.totalcars++;
 			}
-                        Event e;
-			
-			
+	
 		}
 	public String toString(){
 		if (carState.queueFull()){
