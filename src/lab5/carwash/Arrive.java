@@ -2,7 +2,7 @@ package lab5.carwash;
 import lab5.simulator.*;
 /**
  * Class for the Event Carr arrives
- * @author Sara(test)2
+ * @author Sara(test)3
  */
 public class Arrive extends Event {
 	
