@@ -1,10 +1,10 @@
 package lab5.carwash;
 
-
-
 import java.util.NoSuchElementException;
 import java.util.*;
-
+/**
+ * Class FIFO implementing a First in First Out queue
+*/
 public class FIFO {
 	ArrayList <Car> FIFOlst= new ArrayList<Car>();
 	int FIFOsize;
