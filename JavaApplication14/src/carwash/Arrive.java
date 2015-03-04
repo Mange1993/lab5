@@ -1,0 +1,36 @@
+package lab5.carwash;
+import lab5.simulator.*;
+/**
+ * Class for arriving car
+ * @author Sara
+ */
+public class Arrive extends Event {
+	
+	//CarWashState carState;
+	EventQueue eventqueue;
+	CarWashState carState;
+	private double time;
+	
+	public void run(){	
+			Car Arrive =carState.getCar();
+			carState.setCar(Arrive);
+		
+			if (carState.queueFull()){
+				carState.TotalRejected++;
+			} else{
+				carState.Carqueue.add(Arrive);
+				carState.totalcars++;
+			}
+			Event e;
+			
+		}
+	public String toString(){
+		if (carState.queueFull()){
+			return "Rejected";
+		}else{
+			return "Arrive";
+		}
+	}
+	}
+
+
