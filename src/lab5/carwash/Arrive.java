@@ -21,6 +21,7 @@ public class Arrive extends Event {
 				carState.Carqueue.add(Arrive);
 				carState.totalcars++;
 			}
+                        Event e;
 			
 			
 		}
