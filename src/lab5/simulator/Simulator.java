@@ -2,6 +2,7 @@ package lab5.simulator;
 
 public class Simulator {
 	private EventQueue eq;
+	private boolean running = false;
 	
 	public void run(){
 		
@@ -11,7 +12,8 @@ public class Simulator {
 			thisevent.run();
 		}
 	}
-	
-	
 
+	public void stop() {
+		running = true;
+	}
 }
