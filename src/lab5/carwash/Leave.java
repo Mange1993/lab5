@@ -1,7 +1,9 @@
 package carwash;
 
 import lab5.simulator.*;
-
+/**
+ * Class for the event that a car leaves
+ */
 public class Leave extends Event {
 	
 	EventQueue eventqueue;
