@@ -33,7 +33,10 @@ public class Leave extends Event {
                         // if queue is not empty, schedule a new leave event
                         // else, increase available washers
                         if(!(carState.carQueue.isEmpty)){
-                        	if()
+                        	if(fastwash){
+                        		carState.ewmptyFastwash ++;
+                        	}
+                        	else{ carState.ewmptySlowwash ++;
                         }
                         
             
