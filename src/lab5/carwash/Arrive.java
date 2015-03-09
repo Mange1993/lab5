@@ -10,10 +10,10 @@ public class Arrive extends Event {
 	//CarWashState carState;
 	EventQueue eventqueue;
 	CarWashState carState;
-	Event time;
 	
-        public Arrive(double _time, CarWashState carState, EventQueue eventqueue){
-            super._time =time;
+	
+        public Arrive(double time, CarWashState carState, EventQueue eventqueue){
+            super.time =time;
             this.carState = carState;
             this.eventqueue =eventqueue;
         }
