@@ -7,16 +7,20 @@ public class Leave extends Event {
 	EventQueue eventqueue;
 	CarWashState carState;
         Car car;
+        boolean fastwasher = false;
         
         public Leave(double time, CarWashState carState, EventQueue eventqueue, Car car){
             super.time = time;
                 this.carState = carState;
 		this.eventqueue = eventqueue;
 		this.car = car;  
+		this.fastwash = fastwash
             
             
         }
-	
+	/*
+	*checks if there are any cars in line to the washers, if there are, a new leveevent is scheduled 
+	*/
 	public void run(){
             
             // Update the state data
@@ -32,16 +36,23 @@ public class Leave extends Event {
                         
                         // if queue is not empty, schedule a new leave event
                         // else, increase available washers
-                        if(!(carState.carQueue.isEmpty)){
+                        if(!(carState.Carqueue.isEmpty)){
                         	if(fastwash){
                         		carState.ewmptyFastwash ++;
                         	}
                         	else{ carState.ewmptySlowwash ++;
                         }
-                        
+                        else{
+                        	if(fastwash){
+                        	 double finishtime = carState.NewFastWashTime();                        	}
+                        }else{ finishtime = carState.NewSlowWashTime();
             
-		
+			 Car cleaning = carState.Carqueue.first();
+		 	carState.Carqueue.remove();
 	
+			
+			 Leave carLeave = new Leave(finishtime ,carState, eventqueue, cleaning,fastwash);
+				eventqueue.add(carLeave);
 	
 		
 	}
