@@ -14,15 +14,5 @@ public class Start extends Event {
 	    @Override
 	    public void execute(Simulator sim) {
 	        super.execute(sim);
-	    }
-		@Override
-		public void run() {
-			// TODO Auto-generated method stub
-			
-		}
-		@Override
-		public String toString() {
-			// TODO Auto-generated method stub
-			return null;
 	}
 }
