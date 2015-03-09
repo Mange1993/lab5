@@ -68,14 +68,7 @@ public class Arrive extends Event {
         
         }
         
-        
-        
-        
-        
-        
-        
-        
-        
+       
         
 	public String toString(){
 		if (carState.queueFull()){
