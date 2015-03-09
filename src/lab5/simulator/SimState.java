@@ -64,6 +64,7 @@ public abstract class SimState extends Observable {
      * @return DeltaTime between currentEvent and lastEvent, expressed as a double.
      */
     public double getDeltaTime() {
+    	// ? if .... if true, do this.....
         return currentEvent.getTime() - (lastEvent != null ? lastEvent.getTime() : 0);
     }
 }
