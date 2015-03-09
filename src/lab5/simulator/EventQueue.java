@@ -5,7 +5,7 @@ import java.util.*;
 
 /**
  * Class that keeps track of the future events that are about to happen
- * @author Magnus Wahllöf
+ * @author Magnus WahllÃ¶f
  * @author Johan Hammas
  * @author Sara Nilsson
  *
@@ -28,6 +28,29 @@ public class EventQueue {
 	public int size(){
 		return eventqueue.size();
 	}
+
+    /**
+     * Returns the next event in the queue.
+     *
+     * @return Next event in the queue, or null otherwise.
+     */
+    public Event next() {
+        if (hasNext()) {
+            return eventqueue.pop();
+        }
+        else
+            return null;
+    }
+
+	 /**
+     * Returns a boolean if the the SortedSequence has more events or not.
+     *
+     * @return True if more events exist, false otherwise.
+     */
+    public boolean hasNext() {
+        return eventqueue.size() != 0;
+    }
+    
 	/**
 	 * Is the queue empty?
 	 * @return true if queue is empty, otherwise false
@@ -60,12 +83,6 @@ public class EventQueue {
 			return eventqueue.get(0);
 		}
 	}
-	
-
-	}
-	
-	
-	
-	
+}
 	
 	
