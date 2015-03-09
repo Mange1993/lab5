@@ -46,14 +46,23 @@ public class Arrive extends Event {
                         //check to see if fast wash or slow wash is available
                        if(carState.washers()){
                         if(carState.emptyFastwash > 0 ){
-                            carState.emptyFastWash--;}
+                            carState.emptyFastWash--;
+                        	double finishtime = carState.NewFastWashTime();
+                        }
                         else if(carState.emptySlowtwash >0 ){
-                            carState.emptyFSlowWash--;}
+                            carState.emptyFSlowWash--;
+                        	   double finishtime = carState.NewSlowWashTime();
+                        }
                         
+                        
+                     
         
                         //car in machine leves queue
                   Car cleaning = carState.Carqueue.first();
                             carState.Carqueue.remove();
+                            
+                            
+                            
                             
                             
                             //new leave event is scheduled, when wash is finished.
