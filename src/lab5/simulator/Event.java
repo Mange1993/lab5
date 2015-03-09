@@ -7,14 +7,20 @@ package lab5.simulator;
 public abstract class Event {
 	
     protected String _type;
-    protected double _time;
     protected Simulator _simulator;
     protected double _time;
     
     public double getTime(){
     	return _time;
     }
-    
+    /**
+     * Returns the type of the Event
+     *
+     * @return type of Event
+     */
+    public String getType() {
+        return _type;
+    }
     public Event(String type, double time) {
         _type = type;
         _time = time;
