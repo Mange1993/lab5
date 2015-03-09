@@ -57,7 +57,7 @@ public class Arrive extends Event {
                             
                             
                             //new leave event is scheduled, when wash is finished.
-                            Leave carLeave = new Leave();
+                            Leave carLeave = new Leave(finishtime ,carState, eventqueue, cleaning);
                             eventqueue.add(carLeave);
 	
 		}
