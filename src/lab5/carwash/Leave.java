@@ -20,10 +20,10 @@ public class Leave extends Event {
 	public void run(){
             
             // Update the state data
-		//carState.setCurrentEvent(this);
-		//carState.setTime(time);
-		//carState.updateIdleTime();
-		//carState.updateQueueTime();
+		carState.setCurrentEvent(this);
+		carState.setTime(time);
+		carState.updateIdleTime();
+		carState.updateQueueTime();
 		carState.setCar(car);
             
                  // changes view
