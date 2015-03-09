@@ -12,7 +12,7 @@ import java.util.*;
  */
 public class EventQueue {
 	
-	ArrayList <Event> eventqueue= new ArrayList<Event>();
+	private ArrayList <Event> eventqueue= new ArrayList<Event>();
 		
 	/**
 	 * Event added to queue
@@ -36,7 +36,7 @@ public class EventQueue {
      */
     public Event next() {
         if (hasNext()) {
-            return eventqueue.pop();
+            return eventqueue.pop(); // fix, does not like pop.
         }
         else
             return null;
@@ -85,4 +85,4 @@ public class EventQueue {
 	}
 }
 	
-	
+		
