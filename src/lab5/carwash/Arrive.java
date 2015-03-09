@@ -47,11 +47,13 @@ public class Arrive extends Event {
                        if(carState.washers()){
                         if(carState.emptyFastwash > 0 ){
                             carState.emptyFastWash--;
+                            boolean fastwash = true;
                         	double finishtime = carState.NewFastWashTime();
                         }
                         else if(carState.emptySlowtwash >0 ){
                             carState.emptyFSlowWash--;
                         	   double finishtime = carState.NewSlowWashTime();
+                        	     boolean fastwash = false;
                         }
                         
                         
@@ -66,7 +68,7 @@ public class Arrive extends Event {
                             
                             
                             //new leave event is scheduled, when wash is finished.
-                            Leave carLeave = new Leave(finishtime ,carState, eventqueue, cleaning);
+                            Leave carLeave = new Leave(finishtime ,carState, eventqueue, cleaning,fastwash);
                             eventqueue.add(carLeave);
 	
 		}
