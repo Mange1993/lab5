@@ -13,14 +13,4 @@ public class Stop extends Event {
 		        super.execute(sim);
 		        sim.stop();
 		    }
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				
-			}
-			@Override
-			public String toString() {
-				// TODO Auto-generated method stub
-				return null;
-	}
 }
