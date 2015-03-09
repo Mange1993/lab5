@@ -28,11 +28,6 @@ public class EventQueue {
 	public int size(){
 		return eventqueue.size();
 	}
-	
-	 public Event pop() {
-		 return eventqueue.remove(0);
-	 }
-
     /**
      * Returns the next event in the queue.
      *
@@ -40,7 +35,7 @@ public class EventQueue {
      */
     public Event next() {
         if (hasNext()) {
-            return eventqueue.pop(); // fix this, does not like pop or .next()
+            return eventqueue.get(0);
         } else {
             return null;
         }
