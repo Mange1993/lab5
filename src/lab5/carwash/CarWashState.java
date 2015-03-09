@@ -24,8 +24,8 @@ public class CarWashState extends SimState {
 	
 	private int totalfastwash = 2;
 	private int totalslowwash = 2;
-	protected int emptyFastwash;
-	protected int emptySlowwash;
+	protected int emptyFastwash =2;
+	protected int emptySlowwash=2;
 	
 	public FIFO Carqueue = new FIFO();
 
@@ -146,6 +146,11 @@ public class CarWashState extends SimState {
 		return fastDB;
 	}
 	
+	public boolean washers(){
+		if(emptyFastwash > 0 || emptySlowwash > 0 ){
+			return true;
+		}return false;
+	}
 	
 	
 	
