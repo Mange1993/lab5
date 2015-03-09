@@ -45,12 +45,12 @@ public class Arrive extends Event {
                         
                         //check to see if fast wash or slow wash is available
                        if(carState.washers()){
-                        if(carState.emptyFastwash > 0 ){
+                        if(carState.emptyFastwash > 0  && carState.emptyFastwash < totalfastwsash ){
                             carState.emptyFastWash--;
                             boolean fastwash = true;
                         	double finishtime = carState.NewFastWashTime();
                         }
-                        else if(carState.emptySlowtwash >0 ){
+                        else if(carState.emptySlowtwash > 0 && carState.emptySlowtwash < totalslowwash ){
                             carState.emptyFSlowWash--;
                         	   double finishtime = carState.NewSlowWashTime();
                         	     boolean fastwash = false;
